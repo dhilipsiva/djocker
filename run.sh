@@ -7,5 +7,4 @@
 #
 
 PORT=9999
-open "http://localhost:$PORT" &
 DATABASE_URL="sqlite:///db.sqlite3" ./manage.py runserver $PORT
