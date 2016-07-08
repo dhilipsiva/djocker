@@ -7,4 +7,4 @@
 #
 
 
-DATABASE_URL="sqlite3:///db.sqlite3" ./manage.py runserver 9999
+DATABASE_URL="sqlite:///db.sqlite3" ./manage.py runserver 9999

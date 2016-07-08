@@ -133,6 +133,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-DATABASE_URL = environ.get('DATABASE_URL', None)
-if DATABASE_URL is not None:
-    DATABASES['default'] = dj_database_url.config(DATABASE_URL)
+DATABASE_URL = environ.get('DATABASE_URL', "sqlite:///db.sqlite3")
+DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
