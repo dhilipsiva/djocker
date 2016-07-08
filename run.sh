@@ -6,5 +6,6 @@
 # Distributed under terms of the MIT license.
 #
 
-
-DATABASE_URL="sqlite:///db.sqlite3" ./manage.py runserver 9999
+PORT=9999
+open "http://localhost:$PORT" &
+DATABASE_URL="sqlite:///db.sqlite3" ./manage.py runserver $PORT
