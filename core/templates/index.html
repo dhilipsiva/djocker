@@ -1,0 +1,30 @@
+{% load static from staticfiles %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Index</title>
+		<link href="{% static 'tellme/feedback.min.css' %}" rel="stylesheet">
+		<style type="text/css" media="all">
+			.vertical-right-aligned {
+				transform: rotate(-90deg);
+				transform-origin: 100% 100%;
+				position: fixed;
+				right: 0;
+				top: 50%;
+				z-index: 100;
+			}
+		</style>
+		{%  include 'tellme/js_inc.html' %}
+	</head>
+	<body>
+		<h1>django + docker = djocker!</h1>
+		<h3>And now, submit a feedback.</h3>
+		<button type="button" id="feedback-btn" class="btn btn-info btn-lg vertical-right-aligned">
+			Feedback <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+		</button>
+	</body>
+</html>
